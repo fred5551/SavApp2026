@@ -1,0 +1,196 @@
+/* ============================================================
+   SAVAPP – Login Page  (v2)
+   ============================================================ */
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  padding: 24px;
+  background: linear-gradient(135deg, #f0f7f2 0%, #faf7f2 100%);
+}
+
+/* ── Card ─────────────────────────────────────────────────── */
+.login-card {
+  background: #ffffff;           /* force blanc pur */
+  padding: 44px 40px;
+  border-radius: 20px;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, .10);
+  width: 100%;
+  max-width: 420px;
+  border: 1px solid #e0d8cc;    /* bord beige visible */
+}
+
+/* ── Inputs ───────────────────────────────────────────────── */
+.login-input {
+  width: 100%;
+  border: 1.5px solid #c8bfb4;   /* bord plus contrasté */
+  border-radius: 10px;
+  padding: 11px 14px;
+  font-size: .88rem;
+  background: #f7f4f0;           /* fond légèrement crème */
+  color: #2a1f14;
+  font-family: 'DM Sans', sans-serif;
+  transition: border-color 180ms, box-shadow 180ms, background 180ms;
+}
+
+.login-input:focus {
+  outline: none;
+  border-color: #df00a7;
+  box-shadow: 0 0 0 3px rgba(248, 16, 225, 0.15);
+  background: #ffffff;
+}
+
+.login-input::placeholder { color: #b0a898; }
+
+/* ── Labels uppercase ─────────────────────────────────────── */
+.login-label {
+  display: block;
+  font-size: .75rem;
+  font-weight: 600;
+  color: #5a4a38;
+  margin-bottom: 6px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+/* ── Bouton submit ────────────────────────────────────────── */
+.login-submit {
+  background: #ff00b3;           /* vert forêt */
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 14px;
+  font-size: .92rem;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 8px;
+  transition: background 180ms, box-shadow 180ms, transform 120ms;
+}
+
+.login-submit:hover:not(:disabled) {
+  background: #ff00aa;           /* vert plus foncé au hover */
+  box-shadow: 0 6px 20px rgba(74, 124, 89, .35);
+  transform: translateY(-1px);
+}
+
+.login-submit:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.login-submit:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+/* ── Titre ────────────────────────────────────────────────── */
+.login-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #2a1f14;                /* brun foncé */
+  margin-bottom: 4px;
+}
+
+.login-subtitle {
+  font-size: .85rem;
+  color: #8a7f74;
+}
+
+/* ── Icône ────────────────────────────────────────────────── */
+.login-icon {
+  font-size: 2rem;
+  color: #ff00a6;
+}
+
+/* ── Lien inscription ─────────────────────────────────────── */
+.login-link {
+  color: #ff00bb;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.login-link:hover { text-decoration: underline; }
+
+/* ── Bouton œil ───────────────────────────────────────────── */
+.login-eye-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  color: #ff00bb;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 6px;
+  transition: color 150ms, background 150ms;
+}
+
+.login-eye-btn:hover {
+  color: #ff00b3;
+  background: #eef5f1;
+}
+
+/* ── Spinner ──────────────────────────────────────────────── */
+.login-spinner {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 2px solid rgba(255, 255, 255, .35);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: login-spin .7s linear infinite;
+}
+
+@keyframes login-spin { to { transform: rotate(360deg); } }
+
+/* ── Séparateur ───────────────────────────────────────────── */
+.login-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 24px 0 0;
+  color: #c0b8b0;
+  font-size: .78rem;
+
+  &::before,
+  &::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #ede5da;
+  }
+}
+
+/* ── Lien inscription ─────────────────────────────────────── */
+.login-register {
+  font-size: .82rem;
+  color: #8a7f74;
+  margin-top: 18px;
+}
+
+.login-link {
+  color: var(--green-charter, rgb(255, 0, 221));
+  font-weight: 500;
+  text-decoration: none;
+
+  &:hover { text-decoration: underline; }
+}
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .login-card {
+    padding: 32px 22px;
+    border-radius: 16px;
+  }
+
+  .login-title { font-size: 1.6rem; }
+}

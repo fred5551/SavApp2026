@@ -1,0 +1,21 @@
+/* Réutilise les styles de recipe-manager-page */
+.badge-role {
+  display: inline-block;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 20px;
+  margin: 0 2px;
+}
+
+.badge-role-admin {
+  background: #fde8c8;
+  color: #7c4a1a;
+}
+
+.badge-role-user {
+  background: #ddeeff;
+  color: #1a4a7c;
+}
